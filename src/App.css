@@ -13,15 +13,21 @@
   }
 }
 
+
+body{
+
+background-color: #afb3bb;
+
+}
 .App-header {
-  background-color: #282c34;
+  background-color: #255fd3;
   min-height: 100vh;
-  display: flex;
+  display: block;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: rgb(244, 203, 247);
 }
 
 .App-link {
@@ -36,3 +42,199 @@
     transform: rotate(360deg);
   }
 }
+
+.sidebar {
+  width: 240px;
+  background-color: #080000;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow-y: auto; /* Enable vertical scrolling */
+  z-index: 100; /* Set a higher z-index to ensure sidebar is above other content */
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar li {
+  
+  border-bottom: 1px solid #555;
+}
+
+.sidebar li a.active {
+  background-color: #4a2323;
+  font-weight: bold;
+}
+
+.sidebar li:last-child {
+  border-bottom: none;
+}
+
+.sidebar li a {
+  color: #fffdfd;
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: bold;
+  display: block;
+  padding: 20px 70px;
+}
+
+.sidebar li a:hover {
+  background-color: #391414;
+}
+
+.sidebar li a.active {
+  background-color: #555;
+  font-weight: bold;
+}
+
+/* Responsive Media Queries */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 200px;
+  }
+}
+
+@media (max-width: 576px) {
+  .sidebar {
+    width: 150px;
+  }
+}
+
+.content {
+  margin-left: 260px; /* Adjust margin to account for sidebar width */
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-bottom {
+  position: absolute;
+  bottom: 20px;
+  left: 90px;
+}
+
+.login-bottom a {
+  color: #c90909;
+  text-decoration: none;
+  font-size: 20px;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  display: block;
+
+}
+
+/* Hover effect for Login */
+.login-bottom a:hover {
+  text-decoration: underline;
+  color: #ddd; /* Change text color on hover */
+
+}
+
+/* ... (your existing styles above) */
+
+/* Responsive Media Queries */
+@media (max-width: 1024px) {
+  .sidebar {
+    width: 200px;
+  }
+
+  .content {
+    margin-left: 220px;
+  }
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    width: 180px;
+  }
+
+  .content {
+    margin-left: 200px;
+    padding: 20px 10px;
+  }
+
+  .sidebar li a {
+    padding: 15px 40px;
+    font-size: 16px;
+  }
+
+  .login-bottom {
+    left: 60px;
+  }
+
+  .login-bottom a {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 576px) {
+  .sidebar {
+    width: 140px;
+  }
+
+  .content {
+    margin-left: 160px;
+    padding: 20px 5px;
+  }
+
+  .sidebar li a {
+    padding: 12px 30px;
+    font-size: 14px;
+  }
+
+  .login-bottom {
+    left: 40px;
+  }
+
+  .login-bottom a {
+    font-size: 14px;
+  }
+}
+
+.container {
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.form-control {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.btn-submit {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-submit:hover {
+  background-color: #0056b3;
+}
+

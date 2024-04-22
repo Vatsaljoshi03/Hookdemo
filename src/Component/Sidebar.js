@@ -28,8 +28,12 @@ const Sidebar = () => {
                         <NavLink to="/usecallback" activeClassName="active">useCallback</NavLink>
                     </li>
                     <li>
-                        <NavLink to="/custom" activeClassName="active">customHook</NavLink>
+                        <NavLink to="/usecustom" activeClassName="active">usecustom</NavLink>
                     </li>
+
+                    <li>
+                    <NavLink to="/usecount1" activeClassName="active">useCount1</NavLink>
+                </li>
                     <li>
                         <NavLink to="/usememo" activeClassName="active">useMemo</NavLink>
                     </li>

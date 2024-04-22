@@ -16,7 +16,7 @@ function Home () {
           <Card.Text>
             Click this button for more details .
           </Card.Text>
-     <Button variant=""><Link  to = '/home/about'>Click heare</Link></Button>
+     <Button variant=""><Link  to = '/home/about'>Click here</Link></Button>
  
         </Card.Body>
       </Card>

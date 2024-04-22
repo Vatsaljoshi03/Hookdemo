@@ -114,7 +114,7 @@ function App() {
 
   return (
     <div className="container">
-      <h1>React Form Example</h1>
+      <h1> Form </h1>
       <form onSubmit={handleSubmit}>
         <div className="form-group">
           <label>Text:</label>

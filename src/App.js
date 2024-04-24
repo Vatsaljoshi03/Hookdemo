@@ -21,6 +21,8 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Store from './pages/Store';
 import useCount1 from './pages/useCount1';
+import Protected from './pages/Protected';
+import Logout from './pages/Logout';
 
 
 
@@ -33,9 +35,11 @@ const router = createBrowserRouter(
     <Route>
       <Route path="/" element={<Sidebar />}>
 
- <Route path="/home/" element={<Home />} />
-        <Route path="*" element={<h1>Page not Found</h1>} />
 
+        <Route path="*" element={<h1>Page not Found</h1>} />
+        
+        <Route  element={<Protected />}>
+        <Route path="/home" element={<Home />} />
         <Route path="/home/about/" element={<About />} />
         <Route path="/usestate" element={<Usestate />} />
         <Route path="/home/about/:id" element={<Store />} />
@@ -47,8 +51,13 @@ const router = createBrowserRouter(
         <Route path="/usememo" element={<Usememo />} />
         <Route path="/usecustom" element={<useCustom />} />
         <Route path="/usecount1" element={<useCount1/>} />
+        </Route>
+
+
         <Route path="/Sign" element={<Sign />} />
         <Route path="/Login" element={<Login />} />
+        <Route path="/logout" element={<Logout />} />
+
       </Route>
     </Route>
 

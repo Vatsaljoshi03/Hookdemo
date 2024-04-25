@@ -1,12 +1,14 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import Card from 'react-bootstrap/Card';
 import { useState } from 'react';
+import { UserContext } from './context/Store';
 
 
 function Usememo() {
 
     const [count, setCount] = useState(0);
     const [item, setItem] = useState(10);
+    const {data} = useContext(UserContext);
 
     function multiCount(){
         return count*5
@@ -15,7 +17,7 @@ function Usememo() {
     return (
         <div className="container mt-4">
             <h1>useMemo</h1>
-
+             <h1>{data}</h1>
             <Card className="mt-4">
                 <Card.Body><h2>Why we use</h2>The useMemo Hook in React is a performance optimization tool that can be used to memoize expensive computations. Memoization is a technique that stores the result of a function call and returns the stored result on subsequent calls with the same arguments.
                  This can save time and improve performance, especially when the function is expensive to compute.

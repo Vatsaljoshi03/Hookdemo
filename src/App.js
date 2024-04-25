@@ -19,7 +19,7 @@ import Login from './pages/Login';
 import Sidebar from './Component/Sidebar';
 import Home from './pages/Home';
 import About from './pages/About';
-import Store from './pages/Store';
+import Store from './pages/context/Store';
 import useCount1 from './pages/useCount1';
 import Protected from './pages/Protected';
 import Logout from './pages/Logout';
@@ -71,11 +71,16 @@ function App() {
 
   return (
 
+    
+
     <div className="content">
+    <Store>
 
       <RouterProvider router={router} />
-
+      </Store>
     </div>
+
+    
 
   );
 }
